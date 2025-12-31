@@ -103,7 +103,7 @@ const Hero = () => {
                         </div>
                         <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
                             <span className="text-muted">$ location:</span>
-                            <span className="text-cyan">India</span>
+                            <span className="text-cyan">Hyderabad</span>
                         </div>
                     </div>
                 </motion.div>
