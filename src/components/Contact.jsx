@@ -43,22 +43,22 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <div className="glass-card" style={{ padding: '3rem', borderTop: '4px solid var(--primary-color)' }}>
-                        <h3 className="text-mono" style={{ marginBottom: '2rem', fontSize: '1.5rem' }}>$ connect_via_socials</h3>
+                    <div className="glass-card" style={{ padding: '2rem', borderTop: '4px solid var(--primary-color)' }}>
+                        <h3 className="text-mono" style={{ marginBottom: '2rem', fontSize: '1.25rem', overflowWrap: 'break-word' }}>$ connect_via_socials</h3>
                         <div style={{ display: 'grid', gap: '1rem' }}>
-                            <a href="https://github.com/MirgudeMahesh" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ justifyContent: 'space-between', width: '100%' }}>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                                    <Github size={20} />
-                                    <span>/MirgudeMahesh</span>
+                            <a href="https://github.com/MirgudeMahesh" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ justifyContent: 'space-between', width: '100%', whiteSpace: 'normal', height: 'auto', padding: '1rem' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', overflow: 'hidden' }}>
+                                    <Github size={20} style={{ flexShrink: 0 }} />
+                                    <span style={{ overflowWrap: 'anywhere', textAlign: 'left' }}>/MirgudeMahesh</span>
                                 </div>
-                                <ArrowUpRight size={16} />
+                                <ArrowUpRight size={16} style={{ flexShrink: 0 }} />
                             </a>
-                            <a href="https://www.linkedin.com/in/mirgude-mahesh-kumar-794546221/" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ justifyContent: 'space-between', width: '100%' }}>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                                    <Linkedin size={20} />
-                                    <span>/in/mirgude-mahesh</span>
+                            <a href="https://www.linkedin.com/in/mirgude-mahesh-kumar-794546221/" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ justifyContent: 'space-between', width: '100%', whiteSpace: 'normal', height: 'auto', padding: '1rem' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', overflow: 'hidden' }}>
+                                    <Linkedin size={20} style={{ flexShrink: 0 }} />
+                                    <span style={{ overflowWrap: 'anywhere', textAlign: 'left' }}>/in/mirgude-mahesh</span>
                                 </div>
-                                <ArrowUpRight size={16} />
+                                <ArrowUpRight size={16} style={{ flexShrink: 0 }} />
                             </a>
                         </div>
                     </div>

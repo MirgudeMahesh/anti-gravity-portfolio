@@ -146,11 +146,11 @@ const Projects = () => {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '3rem' }}>
                     <Cpu size={32} color="var(--neon-purple)" />
                     <h2 style={{ border: 'none', margin: 0, fontSize: '2.5rem' }}>
-                    Projects
+                        Projects
                     </h2>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
                     {projects.map(p => (
                         <ProjectCard key={p.id} project={p} />
                     ))}

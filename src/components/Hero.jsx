@@ -23,11 +23,8 @@ const Hero = () => {
         <section className="section" style={{ minHeight: '90vh', display: 'flex', alignItems: 'center' }}>
             <div className="container" style={{ position: 'relative' }}>
                 {/* Background Decorator */}
-                <div style={{
-                    position: 'absolute', top: -100, right: -100, width: '400px', height: '400px',
-                    background: 'radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, transparent 70%)',
-                    zIndex: -1, pointerEvents: 'none'
-                }}></div>
+                {/* Background Decorator */}
+                <div className="hero-decorator"></div>
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
