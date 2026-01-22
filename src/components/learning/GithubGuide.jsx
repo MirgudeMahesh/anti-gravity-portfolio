@@ -176,10 +176,10 @@ const GithubGuide = () => {
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
                             {commands.map((c, i) => (
                                 <div key={i} style={{
-                                    display: 'grid',
-                                    gridTemplateColumns: 'auto 1fr',
-                                    gap: '1.5rem',
-                                    padding: '1.5rem 1.25rem',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    gap: '1rem',
+                                    padding: '1.5rem',
                                     background: 'rgba(0,0,0,0.3)',
                                     borderRadius: '12px',
                                     alignItems: 'start'
