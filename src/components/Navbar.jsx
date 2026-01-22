@@ -33,7 +33,7 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className="desktop-links" style={{ display: 'flex', gap: '2rem' }}>
-          {['Skills', 'Experience', 'Projects', 'Contact'].map((item) => (
+          {['Skills', 'Experience', 'Projects', 'Learning', 'Contact'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -60,7 +60,7 @@ const Navbar = () => {
             style={{ overflow: 'hidden', background: 'var(--bg-card)', borderBottom: '1px solid var(--border-color)' }}
           >
             <div className="container" style={{ display: 'flex', flexDirection: 'column', padding: '1.5rem 0' }}>
-              {['Skills', 'Experience', 'Projects', 'Contact'].map((item) => (
+              {['Skills', 'Experience', 'Projects', 'Learning', 'Contact'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}

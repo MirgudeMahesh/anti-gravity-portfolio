@@ -2,7 +2,7 @@ import React from 'react';
 import { Briefcase, Calendar, CheckCircle, Server, Code, Users, Cloud } from 'lucide-react';
 
 const ExperienceItem = ({ role, company, period, description, achievements }) => (
-    <div className="card" style={{ marginBottom: '2rem', borderLeft: '4px solid var(--accent-green)' }}>
+    <div className="glass-card" style={{ marginBottom: '2rem', borderLeft: '4px solid var(--accent-green)' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', marginBottom: '1rem' }}>
             <div>
                 <h3 style={{ margin: 0, color: 'var(--text-primary)', fontSize: '1.5rem' }}>{role}</h3>

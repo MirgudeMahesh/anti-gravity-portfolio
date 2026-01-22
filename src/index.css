@@ -1,5 +1,5 @@
 :root {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   font-weight: 400;
 
@@ -34,10 +34,10 @@ body {
   background-color: var(--bg-dark);
   /* Geometric Grid Background */
   background-image:
-    linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px),
-    radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0) 0%, var(--bg-dark) 100%);
-  background-size: 50px 50px, 50px 50px, 100% 100%;
+    linear-gradient(rgba(56, 189, 248, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.02) 1px, transparent 1px),
+    radial-gradient(circle at 50% 10%, rgba(15, 23, 42, 0) 0%, var(--bg-dark) 100%);
+  background-size: 40px 40px, 40px 40px, 100% 100%;
   color: var(--text-primary);
   overflow-x: hidden;
 }
@@ -91,15 +91,62 @@ h1 {
 /* Glassmorphism Cards */
 .card,
 .glass-card {
-  background: var(--glass-bg);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
-  border-radius: 4px;
-  /* Sharper corners for geometric look */
-  padding: 2rem;
-  transition: all 0.3s ease;
+  border-radius: 12px;
+  padding: 2.5rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
+  overflow: hidden;
+}
+
+.blog-preview-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-bottom: 2px solid transparent;
+}
+
+.blog-preview-card:hover {
+  border-bottom-color: var(--primary-color);
+  transform: translateY(-5px);
+  background: rgba(30, 41, 59, 0.5);
+}
+
+/* Article/Guide Styling */
+.prose {
+  max-width: 65ch;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.prose p {
+  margin-bottom: 1.5rem;
+}
+
+.prose ul,
+.prose ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.prose h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.prose code {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--accent-cyan);
 }
 
 .card:hover,
@@ -174,14 +221,17 @@ h1 {
   }
 }
 
-.projects-grid {
+.projects-grid,
+.learning-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
 @media (max-width: 768px) {
-  .projects-grid {
+
+  .projects-grid,
+  .learning-grid {
     gap: 4rem;
     /* Increased gap for mobile to prevent 'attached' look */
   }

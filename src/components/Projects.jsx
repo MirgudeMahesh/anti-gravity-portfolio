@@ -69,7 +69,7 @@ const ProjectCard = ({ project }) => {
 
     return (
         <motion.div
-            className="card"
+            className="glass-card blog-preview-card"
             whileHover={{ y: -10, boxShadow: '0 0 30px rgba(6, 182, 212, 0.2)' }}
             style={{ display: 'flex', flexDirection: 'column', height: '100%', position: 'relative', overflow: 'hidden' }}
         >
@@ -127,7 +127,7 @@ const ProjectCard = ({ project }) => {
                         }}
                     >
                         {analyzing ? <Terminal size={16} /> : <Scan size={16} />}
-                        {analyzing ? 'Analysis Complete' : 'Run AI Analysis'}
+                        {analyzing ? 'Hide Case Study' : 'View Case Study'}
                     </button>
 
                     <AnimatePresence>

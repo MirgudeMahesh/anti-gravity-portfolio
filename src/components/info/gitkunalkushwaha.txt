@@ -1,0 +1,122 @@
+
+COMMANDS                        FUNCTIONALITIES
+___________________________________________________________________
+
+git init                  (initialize git repository/folder so that it will save history of git operations in future )
+
+ls/ls -a/ls.x             list all files/list even hidden files/list everything in folder 'x'
+
+git status                changes made to files that didnot saved/commited
+  
+rm -rf x1                 delete x1 directory/folder
+ 
+git add./git add abc      adding all unstaged(unsaved) files/staging file abc         
+
+git commit -m 'done'       commited all files to github   
+
+git restore --staged abc   unstage abc file if it is stages
+
+git log                    all commits that were made in the history
+
+git reset add1             situation1
+
+git stash                  git stash is a command used to temporarily save (or "stash") uncommitted changes 
+                           in your local working directory and index, allowing you to switch branches or work
+                           on something else with a clean working directory. The stashed changes are stored locally in a stack and can be reapplied later
+
+git stash pop              which changes done by git stash
+
+git stash clear            clearing all the commits those hidden by command git stash
+
+git remote add origin      connecting project with github repo
+https.....
+
+git push origin main
+situation1:
+if i have commited a1(1st)->a2(2nd)->a3(3rd) then i want to delete
+2nd and 3rd commit and land on 1st i need to copy 1st commit address(add1)
+then it will land on s1 and a2 and a3 remained unstaged
+
+
+
+BRANCH CREATION:
+______________________________
+
+git branch feature        creating a branch feature(head is pointing to the feature branch)
+
+git checkout main          head back to main branch
+
+git merge feature          merge feature branch to main
+
+procedure: 
+we cant make changes directly to someones project we need to fork 
+thier github repo initially and clone 
+then create a branch and do a pull request
+
+1 branch = 1 pull request 
+create multiple branches to do multiple commits 
+or else all the changes will be on one branch which is tough to maintain
+
+
+
+Commands to create folder and file in it using commands:
+____________________________________________
+C:\Users\Pulse>mkdir learngit  (create folder)
+
+C:\Users\Pulse>cd learngit  (entering into folder)
+
+C:\Users\Pulse\learngit>echo Hello World>file.txt (create file and write content in it)
+
+C:\Users\Pulse\learngit>type file.txt(check what is there in there)
+Hello World
+
+______________________________________________________
+
+PROCESS OF CREATING A PULL REQUEST:
+_____________________________________________________
+
+C:\Users\Pulse>git clone https://github.com/genesis-projects-2025/learn-git.git
+Cloning into 'learn-git'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+C:\Users\Pulse>cd learn-git
+
+C:\Users\Pulse\learn-git>git checkout -b your-feature-branch
+
+
+(Switched to a new branch 'your-feature-branch')
+
+C:\Users\Pulse\learn-git>echo Pull Requesting>Request.txt
+
+C:\Users\Pulse\learn-git>git add .
+
+C:\Users\Pulse\learn-git>git status
+On branch your-feature-branch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Request.txt
+
+C:\Users\Pulse\learn-git>git commit -m "Your changes"
+
+
+C:\Users\Pulse\learn-git>git push -u origin your-feature-branch
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'your-feature-branch' on GitHub by visiting:
+remote:      https://github.com/genesis-projects-2025/learn-git/pull/new/your-feature-branch
+remote:
+To https://github.com/genesis-projects-2025/learn-git.git
+ * [new branch]      your-feature-branch -> your-feature-branch
+branch 'your-feature-branch' set up to track 'origin/your-feature-branch'.
+
+
+_____________________________________________________
+
+switching git credentials:
+__________________________________________
+git config --global user.name "Your Name"
+git config --global user.email "youremail@example.com"
+
